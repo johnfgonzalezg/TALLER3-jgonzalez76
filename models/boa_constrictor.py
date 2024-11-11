@@ -20,7 +20,7 @@ class BoaConstrictor(ExoticAnimal):
     
     #Método propio de la clase BoaCosntrictor
     def feed_boa(self) -> str:
-        if self.get_eatenMice() >= 10:
+        if self.get_eatenMice() >= 20:
             raise ValueError('Demasiados Ratones!')
         self.__eatenMice += 1
         return 'Éxito'

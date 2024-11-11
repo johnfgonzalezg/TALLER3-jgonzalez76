@@ -35,7 +35,7 @@ class TestBoaConstrictor(unittest.TestCase):
     @unittest.expectedFailure
     def test_feed_boa_too_much_mice(self):
         boa = BoaConstrictor('Helena', 19.0, 9, 'Brazil', 3500.3)
-        for _ in range(10):
+        for _ in range(20):
             print(f'feed boa: {_}')
             boa.feed_boa()
         with self.assertRaises(ValueError) as context:

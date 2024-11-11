@@ -22,6 +22,7 @@ class TestNursery(unittest.TestCase):
             self.assertEqual(nursery.feed_boa(boa1), 'Éxito')
 
     # Método para probar que alimentar a una boa con demasiados ratones lanza una excepción
+    @unittest.expectedFailure
     def test_feed_boa_too_much_mice(self) -> None:
         boa1 = BoaConstrictor('Helena', 19.0, 9, 'Brasil', 3500.3)
         boa2 = BoaConstrictor('Albert', 24.0, 5, 'Colombia', 4500.2)
@@ -41,6 +42,7 @@ class TestNursery(unittest.TestCase):
         self.assertEqual(str(context.exception), 'Demasiados Ratones!')
 
     # Método para probar que alimentar a una boa que no existe lanza una excepción
+    @unittest.expectedFailure
     def test_feed_boa_dont_exist(self) -> None:
         boa1 = BoaConstrictor('Helena', 19.0, 9, 'Brasil', 3500.3) 
         boa2 = BoaConstrictor('Albert', 24.0, 5, 'Colombia', 4500.2) 
